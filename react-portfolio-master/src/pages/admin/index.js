@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import { Container, Row, Col, Card, Button, Spinner } from "react-bootstrap";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "";
+
 export const AdminMessages = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -16,7 +18,7 @@ export const AdminMessages = () => {
 
   const fetchMessages = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/messages");
+      const response = await fetch(`${API_BASE_URL}/api/messages`);
       const data = await response.json();
       if (data.success) {
         setMessages(data.messages);
@@ -34,7 +36,7 @@ export const AdminMessages = () => {
 
   const handleMarkAsRead = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/messages/${id}/read`, {
+      const response = await fetch(`${API_BASE_URL}/api/messages/${id}/read`, {
         method: "PUT",
       });
       const data = await response.json();
@@ -49,7 +51,7 @@ export const AdminMessages = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this message?")) {
       try {
-        const response = await fetch(`http://localhost:5000/api/messages/${id}`, {
+        const response = await fetch(`${API_BASE_URL}/api/messages/${id}`, {
           method: "DELETE",
         });
         const data = await response.json();

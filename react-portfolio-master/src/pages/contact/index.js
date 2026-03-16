@@ -5,6 +5,8 @@ import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "";
+
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
     email: "",
@@ -21,7 +23,7 @@ export const ContactUs = () => {
     setFormdata({ ...formData, loading: true });
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
