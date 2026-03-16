@@ -1,5 +1,6 @@
 const dbConnect = require("../_lib/dbConnect");
 const Message = require("../_lib/Message");
+const { listMessages } = require("../_lib/memoryStore");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "GET") {
@@ -8,9 +9,15 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    await dbConnect();
+    const hasDatabase = Boolean(process.env.MONGODB_URI);
+    let messages;
 
-    const messages = await Message.find().sort({ timestamp: -1 });
+    if (hasDatabase) {
+      await dbConnect();
+      messages = await Message.find().sort({ timestamp: -1 });
+    } else {
+      messages = listMessages();
+    }
 
     return res.status(200).json({
       success: true,

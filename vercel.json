@@ -3,11 +3,6 @@
   "installCommand": "npm install && npm --prefix react-portfolio-master install",
   "buildCommand": "npm --prefix react-portfolio-master run build",
   "outputDirectory": "react-portfolio-master/build",
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",

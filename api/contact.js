@@ -1,5 +1,6 @@
 const dbConnect = require("./_lib/dbConnect");
 const Message = require("./_lib/Message");
+const { createMessage } = require("./_lib/memoryStore");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
@@ -8,7 +9,7 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    await dbConnect();
+    const hasDatabase = Boolean(process.env.MONGODB_URI);
 
     const { name, email, message } = req.body || {};
 
@@ -18,11 +19,22 @@ module.exports = async function handler(req, res) {
         .json({ success: false, error: "Please fill all required fields" });
     }
 
-    const created = await Message.create({
-      name: String(name).trim(),
-      email: String(email).trim().toLowerCase(),
-      message: String(message).trim(),
-    });
+    let created;
+
+    if (hasDatabase) {
+      await dbConnect();
+      created = await Message.create({
+        name: String(name).trim(),
+        email: String(email).trim().toLowerCase(),
+        message: String(message).trim(),
+      });
+    } else {
+      created = createMessage({
+        name: String(name).trim(),
+        email: String(email).trim().toLowerCase(),
+        message: String(message).trim(),
+      });
+    }
 
     return res.status(201).json({
       success: true,

@@ -1,5 +1,6 @@
 const dbConnect = require("../../_lib/dbConnect");
 const Message = require("../../_lib/Message");
+const { markRead } = require("../../_lib/memoryStore");
 
 module.exports = async function handler(req, res) {
   if (req.method !== "PUT") {
@@ -8,14 +9,21 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    await dbConnect();
+    const hasDatabase = Boolean(process.env.MONGODB_URI);
 
     const { id } = req.query;
-    const message = await Message.findByIdAndUpdate(
-      id,
-      { isRead: true },
-      { new: true }
-    );
+    let message;
+
+    if (hasDatabase) {
+      await dbConnect();
+      message = await Message.findByIdAndUpdate(
+        id,
+        { isRead: true },
+        { new: true }
+      );
+    } else {
+      message = markRead(id);
+    }
 
     return res.status(200).json({
       success: true,
