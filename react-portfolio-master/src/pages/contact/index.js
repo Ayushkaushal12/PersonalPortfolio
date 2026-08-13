@@ -61,11 +61,11 @@ export const ContactUs = () => {
         });
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Contact form error:", error.name, error.message);
       setFormdata({
         ...formData,
         loading: false,
-        alertmessage: "Failed to send message. Please check your connection.",
+        alertmessage: "Unable to send your message right now. Please try again.",
         variant: "danger",
         show: true,
       });
@@ -167,7 +167,7 @@ export const ContactUs = () => {
               <br />
               <Row>
                 <Col lg="12" className="form-group">
-                  <button className="btn ac_btn" type="submit">
+                  <button className="btn ac_btn" type="submit" disabled={formData.loading}>
                     {formData.loading ? "Sending..." : "Send"}
                   </button>
                 </Col>

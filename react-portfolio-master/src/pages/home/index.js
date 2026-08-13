@@ -36,7 +36,7 @@ export const Home = () => {
                       ],
                       autoStart: true,
                       loop: true,
-                      deleteSpeed: 10,
+                      deleteSpeed: 20,
                     }}
                   />
                 </h1>
@@ -51,16 +51,24 @@ export const Home = () => {
                     </div>
                   </Link>
                     <a href="/AyushCV.pdf" download className="text_2">
-                    <div id="button_r" className="ac_btn btn">
+                    <div id="button_h" className="ac_btn btn">
                       Download CV
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
                     </div>
                   </a>
-                  <Link to="/contact">
+                  {/* <Link to="/contact">
                     <div id="button_h" className="ac_btn btn ">
                       Contact Me
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </div>
+                  </Link> */}
+                  <Link to="https://leetcode.com/u/Ayushkaushal_01/" target="_blank" className="text_2">
+                    <div id="button_r" className="ac_btn btn ">
+                      LeetCode
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>

@@ -62,6 +62,18 @@ const skills = [{
 ];
 
 const certificates = [
+      {
+        title: "Oracle Data Platform",
+        issuer: "Oracle",
+        year: "2026",
+        link: "https://drive.google.com/file/d/1CRSV_i6nxq9KjPWrliL8btQi4ALnxxMl/view?usp=sharing",
+    },
+     {
+        title: "Cloud Computing (NPTEL)",
+        issuer: "NPTEL",
+        year: "2026",
+        link: "https://drive.google.com/file/d/1NqrBD0VbZWlW1_I4qXAUh8jR0wIwc5rL/view?usp=sharing",
+    },
     {
         title: "TCP/IP and Advanced Topics",
         issuer: "Coursera",
@@ -81,7 +93,7 @@ const certificates = [
         link: "https://www.coursera.org/account/accomplishments/verify/ZLNQEKW6WAFH?utm_source=ln&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
     },
       {
-        title: "fundamental of data structure and algorithm",
+        title: "Fundamental of data structure and algorithm",
         issuer: "Lovely Professional University",
         year: "2025",
         link: "https://drive.google.com/file/d/1G5-cbKO2rsfuQhk937eOsFJB-RGKHFeP/view?usp=sharing",
@@ -140,7 +152,7 @@ const dataportfolio = [
         title: "InvestAI",
         img: "https://plus.unsplash.com/premium_photo-1676637656277-498f73258bec?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWklMjBpbiUyMGZpbmFuY2V8ZW58MHx8MHx8fDA%3D",
         description: "AI-powered investment analysis platform for data-driven decision making.",
-        link: "https://investai.vercel.app/",
+        link: "https://invest-ai-two-red.vercel.app/",
     },
     {
         title: "TravelBot",
@@ -149,16 +161,16 @@ const dataportfolio = [
         link: "https://travelbot-five.vercel.app/",
     },
     {
-        title: "Healthcare Portal",
-        img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
-        description: "Healthcare management portal for handling patient records, remedies, and key operations.",
-        link: "https://github.com/Ayushkaushal12/HealthcarePortal",
-    },
-    {
         title: "Kaushal Homoeo Hall CMS",
         img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
         description: "Template-based CMS project for managing clinic/hospital-related workflows and content.",
         link: "https://kaushal-homoeo-hall-cms.vercel.app/#/dashboard",
+    },
+    {
+        title: "Healthcare Portal",
+        img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80",
+        description: "Healthcare management portal for handling patient records, remedies, and key operations.",
+        link: "https://github.com/Ayushkaushal12/HealthcarePortal",
     },
 ];
 
