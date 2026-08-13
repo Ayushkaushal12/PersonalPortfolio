@@ -18,7 +18,9 @@ export const Home = () => {
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "
           >
-            <img src={introdata.your_img_url} alt="Profile" className="profile-img" />
+            <div className="profile-img-wrap">
+              <img src={introdata.your_img_url} alt="Profile" className="profile-img" />
+            </div>
           </div>
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center ">
@@ -64,14 +66,6 @@ export const Home = () => {
                       <div className="ring three"></div>
                     </div>
                   </Link>
-                  {/* <a href="/AyushCV.pdf" download className="text_2">
-                    <div id="button_r" className="ac_btn btn">
-                      Download CV
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </a> */}
                 </div>
               </div>
             </div>

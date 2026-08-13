@@ -37,7 +37,7 @@ const worktimeline = [{
 
 const skills = [{
         name: "C++",
-        value: 85,
+        value: 90,
     },
     {
         name: "React.js",
@@ -45,7 +45,7 @@ const skills = [{
     },
     {
         name: "Javascript",
-        value: 80,
+        value: 85,
     },
     {
         name: "Node.js",
@@ -53,7 +53,7 @@ const skills = [{
     },
     {
         name: "PHP",
-        value: 70,
+        value: 75,
     },
      {
         name: "HTML/Tailwind",
@@ -131,16 +131,22 @@ const services = [
 
 const dataportfolio = [
     {
-        title: "PodFinder",
+        title: "PodSphere",
         img: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=900&q=80",
         description: "Podcast discovery platform helping users find and explore podcasts based on interests and preferences.",
-        link: "https://github.com/Ayushkaushal12/podfinder",
+        link: "https://pod-sphere-blush.vercel.app/",
+    },
+     {
+        title: "InvestAI",
+        img: "https://plus.unsplash.com/premium_photo-1676637656277-498f73258bec?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWklMjBpbiUyMGZpbmFuY2V8ZW58MHx8MHx8fDA%3D",
+        description: "AI-powered investment analysis platform for data-driven decision making.",
+        link: "https://investai.vercel.app/",
     },
     {
         title: "TravelBot",
         img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80",
         description: "AI-powered chatbot for travel recommendations, itinerary planning, and destination insights.",
-        link: "https://github.com/Ayushkaushal12/travelbot",
+        link: "https://travelbot-five.vercel.app/",
     },
     {
         title: "Healthcare Portal",
@@ -152,7 +158,7 @@ const dataportfolio = [
         title: "Kaushal Homoeo Hall CMS",
         img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80",
         description: "Template-based CMS project for managing clinic/hospital-related workflows and content.",
-        link: "https://github.com/Ayushkaushal12/kaushal-homoeo-hall-cms",
+        link: "https://kaushal-homoeo-hall-cms.vercel.app/#/dashboard",
     },
 ];
 

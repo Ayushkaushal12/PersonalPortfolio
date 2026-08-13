@@ -1,7 +1,7 @@
 {
   "name": "react-portfolio-master",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000P\u0000e\u0000r\u0000s\u0000o\u0000n\u0000a\u0000l\u0000P\u0000o\u0000r\u0000t\u0000f\u0000o\u0000l\u0000i\u0000o\u0000\r\u0000 \u0000",
   "main": "server.js",
   "scripts": {
     "start": "npm --prefix react-portfolio-master run start",
@@ -36,5 +36,13 @@
   },
   "devDependencies": {
     "jest": "^27.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ayushkaushal12/PersonalPortfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ayushkaushal12/PersonalPortfolio/issues"
+  },
+  "homepage": "https://github.com/Ayushkaushal12/PersonalPortfolio#readme"
 }
